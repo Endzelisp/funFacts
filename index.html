@@ -7,16 +7,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Fun Random Facts</h1>
-    <p>Probably useless, surely random!!!</p>
-  </header>
-  <main>
-    <article>
-      <p>Ready for the first one?</p>
-      <button type="button">Get Fact</button>
-    </article>
-  </main>
+  <div class="main-wrapper">
+    <header class="header">
+      <h1>Fun Random Facts</h1>
+      <p>Probably useless, surely random!!!</p>
+    </header>
+    <main class="main">
+      <article>
+        <p id="random-fact">Ready for the first one?</p>
+        <button type="button" id="get-random-fact">Get Fact</button>
+      </article>
+    </main>
+    <footer class="footer">
+      <p>free public API used for this project <a href="https://uselessfacts.jsph.pl/" target="_blank" rel="noopener noreferrer">uselessfacts</a></p>
+    </footer>
+  </div>
   <script src="index.js"></script>
 </body>
 </html>

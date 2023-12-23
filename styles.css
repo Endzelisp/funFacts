@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-blue: hsl(235, 21%, 21%);
+  --lightblue: hsl(218, 17%, 62%);
+  --vibrant-red: hsl(353, 86%, 54%);
+  --intense-red: hsl(353, 86%, 50%);
+  --soft-white: hsl(197, 24%, 94%);
+  --pure-white: hsl(0, 0%, 100%);
+  --main-inline-padding: 16px;
+}
+
+html, body {
+  height: 100%;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--pure-white);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px var(--main-inline-padding);
+}
+
+.header p {
+  position: relative;
+  left: 3rem;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  flex-basis: 800px;
+  padding-inline: var(--main-inline-padding);
+}
+
+.main #random-fact {
+  font-size: clamp(1.125rem, 1vw + 1rem, 1.5rem);
+  line-height: 1.5;
+}
+
+.main button[id="get-random-fact"] {
+  appearance: none;
+  border: none;
+  padding: 16px 48px;
+  font-size: 1.25rem;
+  background-color: var(--vibrant-red);
+  color: var(--soft-white);
+}
+
+.main button[id="get-random-fact"]:active {
+  background-color: var(--intense-red);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  background-color: var(--dark-blue);
+  color: var(--soft-white);
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+  font-style: oblique;
+  font-weight: 700;
+}
