@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+:root {
+  --dark-blue: hsl(235, 21%, 21%);
+  --lightblue: hsl(218, 17%, 62%);
+  --vibrant-red: hsl(353, 86%, 54%);
+  --soft-white: hsl(197, 24%, 94%);
+}
+
 html, body {
   height: 100%;
 }
