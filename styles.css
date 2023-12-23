@@ -8,7 +8,9 @@
   --dark-blue: hsl(235, 21%, 21%);
   --lightblue: hsl(218, 17%, 62%);
   --vibrant-red: hsl(353, 86%, 54%);
+  --intense-red: hsl(353, 86%, 50%);
   --soft-white: hsl(197, 24%, 94%);
+  --pure-white: hsl(0, 0%, 100%);
 }
 
 html, body {
@@ -19,10 +21,41 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: var(--pure-white);
 }
 
 .main {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  flex-basis: 800px;
+  padding: 16px;
+}
+
+.main #random-fact {
+  font-size: clamp(1.125rem, 1vw + 1rem, 1.5rem);
+  line-height: 1.5;
+}
+
+.main button[id="get-random-fact"] {
+  appearance: none;
+  border: none;
+  padding: 16px 48px;
+  font-size: 1.25rem;
+  background-color: var(--vibrant-red);
+  color: var(--soft-white);
+}
+
+.main button[id="get-random-fact"]:active {
+  background-color: var(--intense-red);
 }
 
 .footer {
