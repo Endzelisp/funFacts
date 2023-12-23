@@ -1,2 +1,2 @@
 # funFacts
-Simple app to practice fetching data and have fun with fun random facts
+Simple app to practice fetching data with asynchronous functions and to have fun with random facts
