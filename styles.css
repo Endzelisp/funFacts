@@ -54,7 +54,13 @@ html, body {
   position: relative;
   left: 5%;
   width: max-content;
-  font-size: clamp(0.875rem, 1vw + 1rem, 1.25rem);
+  font-size: .875rem;
+}
+
+@media (width > 301px) {
+  .header p {
+    font-size: 1rem;
+  }
 }
 
 .main {
@@ -76,6 +82,7 @@ html, body {
 .main #random-fact {
   font-size: clamp(1.125rem, 1vw + 1rem, 1.5rem);
   line-height: 1.5;
+  text-align: center;
 }
 
 .main button[id="get-random-fact"] {
@@ -100,7 +107,18 @@ html, body {
   padding: 24px 0;
   background-color: var(--dark-blue);
   color: var(--soft-white);
-  font-size: 0.875rem;
+}
+
+.footer p,
+.footer a {
+  font-size: 0.75rem;
+}
+
+@media (width > 301px) {
+  .footer p,
+  .footer a {
+    font-size: 0.875rem;
+  }
 }
 
 .footer a {
