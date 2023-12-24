@@ -35,6 +35,7 @@ html, body {
 .header p {
   position: relative;
   left: 3rem;
+  width: max-content;
 }
 
 .main {
