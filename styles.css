@@ -1,3 +1,15 @@
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/Poppins-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/Poppins-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,9 +21,11 @@
   --lightblue: hsl(218, 17%, 62%);
   --vibrant-red: hsl(353, 86%, 54%);
   --intense-red: hsl(353, 86%, 50%);
+  --dark-grey: hsl(0, 0%, 16%);
   --soft-white: hsl(197, 24%, 94%);
   --pure-white: hsl(0, 0%, 100%);
   --main-inline-padding: 16px;
+  --custom-font: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, body {
@@ -22,6 +36,7 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: var(--custom-font);
   background-color: var(--pure-white);
 }
 
@@ -32,9 +47,21 @@ html, body {
   padding: 12px var(--main-inline-padding);
 }
 
+.header h1 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+}
+
 .header p {
   position: relative;
-  left: 3rem;
+  left: 5%;
+  width: max-content;
+  font-size: .875rem;
+}
+
+@media (width > 301px) {
+  .header p {
+    font-size: 1rem;
+  }
 }
 
 .main {
@@ -56,15 +83,20 @@ html, body {
 .main #random-fact {
   font-size: clamp(1.125rem, 1vw + 1rem, 1.5rem);
   line-height: 1.5;
+  text-align: center;
 }
 
 .main button[id="get-random-fact"] {
   appearance: none;
   border: none;
   padding: 16px 48px;
+  font-family: var(--custom-font);
   font-size: 1.25rem;
+  font-weight: 700;
   background-color: var(--vibrant-red);
   color: var(--soft-white);
+  outline: 2px solid var(--dark-grey);
+  border-radius: 3px;
 }
 
 .main button[id="get-random-fact"]:active {
@@ -78,6 +110,18 @@ html, body {
   padding: 24px 0;
   background-color: var(--dark-blue);
   color: var(--soft-white);
+}
+
+.footer p,
+.footer a {
+  font-size: 0.75rem;
+}
+
+@media (width > 301px) {
+  .footer p,
+  .footer a {
+    font-size: 0.875rem;
+  }
 }
 
 .footer a {
