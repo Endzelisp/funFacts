@@ -21,6 +21,7 @@
   --lightblue: hsl(218, 17%, 62%);
   --vibrant-red: hsl(353, 86%, 54%);
   --intense-red: hsl(353, 86%, 50%);
+  --dark-grey: hsl(0, 0%, 16%);
   --soft-white: hsl(197, 24%, 94%);
   --pure-white: hsl(0, 0%, 100%);
   --main-inline-padding: 16px;
@@ -94,6 +95,8 @@ html, body {
   font-weight: 700;
   background-color: var(--vibrant-red);
   color: var(--soft-white);
+  outline: 2px solid var(--dark-grey);
+  border-radius: 3px;
 }
 
 .main button[id="get-random-fact"]:active {
