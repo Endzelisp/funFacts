@@ -1,3 +1,15 @@
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/Poppins-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/Poppins-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +24,7 @@
   --soft-white: hsl(197, 24%, 94%);
   --pure-white: hsl(0, 0%, 100%);
   --main-inline-padding: 16px;
+  --custom-font: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, body {
@@ -22,6 +35,7 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: var(--custom-font);
   background-color: var(--pure-white);
 }
 
@@ -68,6 +82,7 @@ html, body {
   appearance: none;
   border: none;
   padding: 16px 48px;
+  font-family: var(--custom-font);
   font-size: 1.25rem;
   font-weight: 700;
   background-color: var(--vibrant-red);
